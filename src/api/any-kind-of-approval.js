@@ -23,6 +23,8 @@ const mockData = [
 async function fetchRecords() {
   try {
     // const { data } = await axios.get(URL_NAME);
+    // Simulate a slow request for the Loader to be visible.
+    await new Promise(resolve => setTimeout(resolve, 1000));
     const data = mockData;
     return {
       dataArr: data,
